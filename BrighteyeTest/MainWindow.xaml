@@ -1,0 +1,38 @@
+﻿<Window x:Class="BrighteyeTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrighteyeTest"
+        mc:Ignorable="d"
+        Title="Brighteye Test Main Window" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40px"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="80px"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">First Table</TextBlock>
+        <ListView Grid.Column="0" Grid.Row="1" Name="firstNumberList" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Value}" Width="100">Value</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">Second Table</TextBlock>
+        <ListView Grid.Column="1" Grid.Row="1" Name="secondNumberList"  Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Value}" Width="100">Value</GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="PopulateFirstTableBtn" Margin="20 10 20 10" Grid.Column="0" Grid.Row="2" Content="Populate First Table" />
+        <Button x:Name="PopulateSecondTableBtn" Margin="20 10 20 10" Grid.Column="1" Grid.Row="2" Content="Sort and Populate Second Table" />
+    </Grid>
+</Window>
