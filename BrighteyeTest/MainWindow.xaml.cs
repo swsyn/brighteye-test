@@ -44,6 +44,7 @@ namespace BrighteyeTest
             PopulateFirstTableBtn.Click += PopulateFirstTableBtn_Click;
             PopulateSecondTableBtn.Click += PopulateSecondTableBtn_Click;
         }
+        
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             db.Dispose();
